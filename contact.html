@@ -5,189 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Thomas Reichert</title>
     <meta name="description" content="Contact Thomas Reichert - Assistant Professor of Law at SIU and IP consultant.">
+    <meta property="og:title" content="Contact | Thomas Reichert">
+    <meta property="og:description" content="Contact Thomas Reichert - Assistant Professor of Law at SIU and IP consultant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reichert.law/contact.html">
+    <meta property="og:image" content="https://reichert.law/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-:root {
-    --primary: #152538;
-    --primary-light: #1a2e4a;
-    --primary-dark: #0d1a2a;
-    --gold: #b8860b;
-    --gold-light: #d4a847;
-    --text: #2c2c2c;
-    --text-light: #5a5a5a;
-    --border: #d4d4d4;
-    --border-light: #e8e8e8;
-    --bg: #ffffff;
-    --bg-subtle: #f8f7f5;
-    --bg-warm: #faf9f7;
-    --bg-cream: #fdfcfa;
-    --white: #ffffff;
-    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-    --font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
-    --transition-fast: 0.15s ease;
-    --transition-medium: 0.3s ease;
-    --shadow-sm: 0 1px 3px rgba(21, 37, 56, 0.08);
-    --shadow-md: 0 4px 12px rgba(21, 37, 56, 0.1);
-}
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); font-size: 16px; line-height: 1.65; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
-a { color: var(--primary); text-decoration: none; transition: color var(--transition-fast); }
-a:hover { color: var(--gold); }
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; color: var(--primary); line-height: 1.25; }
-
-.site-header { position: sticky; top: 0; z-index: 100; background: var(--primary); border-bottom: 1px solid var(--primary-dark); box-shadow: var(--shadow-sm); }
-.site-header::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-.header-container { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-.logo { display: flex; flex-direction: column; text-decoration: none; }
-.logo-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.02em; }
-.logo-credentials { font-family: var(--font-body); font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.08em; font-weight: 500; }
-.main-nav ul { display: flex; list-style: none; gap: 2rem; }
-.main-nav a { font-size: 0.95rem; font-weight: 500; color: rgba(255, 255, 255, 0.85); padding: 0.5rem 0; position: relative; }
-.main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width var(--transition-medium); }
-.main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
-.mobile-menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-.mobile-menu-toggle span { width: 24px; height: 2px; background: var(--white); transition: var(--transition-fast); }
-
-.contact-section { 
-    padding: 5rem 2rem; 
-    background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-cream) 100%);
-    min-height: calc(100vh - 200px);
-}
-.contact-container { max-width: 700px; margin: 0 auto; text-align: center; }
-.contact-section h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-.contact-section h1::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
-    margin: 1rem auto 0;
-}
-.contact-intro { font-size: 1.15rem; color: var(--text-light); margin-bottom: 3rem; margin-top: 1.5rem; line-height: 1.7; }
-
-.contact-form {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 4px;
-    padding: 2.5rem;
-    text-align: left;
-    box-shadow: var(--shadow-sm);
-}
-.form-group {
-    margin-bottom: 1.5rem;
-}
-.form-group label {
-    display: block;
-    font-weight: 500;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-}
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background: var(--bg);
-    color: var(--text);
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
-}
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-.form-group select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a5a5a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    padding-right: 2.5rem;
-}
-.submit-btn {
-    display: inline-block;
-    padding: 0.875rem 2rem;
-    background: var(--primary);
-    color: var(--white);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background var(--transition-fast), transform var(--transition-fast);
-}
-.submit-btn:hover {
-    background: var(--gold);
-    transform: translateY(-1px);
-}
-.form-note {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-light);
-    font-size: 0.9rem;
-    color: var(--text-light);
-    text-align: center;
-}
-.connect-section {
-    margin-top: 2rem;
-    text-align: center;
-}
-.connect-section p {
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-}
-.connect-links a {
-    color: var(--gold);
-    font-weight: 500;
-}
-.connect-links a:hover {
-    color: var(--gold-light);
-}
-
-.site-footer { background: var(--primary-dark); color: var(--white); padding: 3rem 2rem 2rem; position: relative; }
-.site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary-dark), var(--gold), var(--primary-dark)); }
-.footer-container { max-width: 1100px; margin: 0 auto; }
-.footer-main { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 2rem; border-bottom: 1px solid rgba(184, 134, 11, 0.2); margin-bottom: 1.5rem; }
-.footer-brand { display: flex; flex-direction: column; gap: 0.25rem; }
-.footer-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; }
-.footer-title { font-size: 0.9rem; color: var(--gold-light); }
-.footer-school { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
-.footer-links { display: flex; gap: 2rem; }
-.footer-links a { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
-.footer-links a:hover { color: var(--gold-light); }
-.footer-bottom { text-align: center; }
-.footer-bottom p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.5); }
-
-@media (max-width: 700px) {
-    .header-container { padding: 1rem; }
-    .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--primary); border-bottom: 1px solid var(--primary-dark); padding: 1rem; box-shadow: var(--shadow-md); }
-    .main-nav.active { display: block; }
-    .main-nav ul { flex-direction: column; gap: 0; }
-    .main-nav li { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-    .main-nav li:last-child { border-bottom: none; }
-    .main-nav a { display: block; padding: 0.75rem 0; }
-    .mobile-menu-toggle { display: flex; }
-    .footer-main { flex-direction: column; gap: 1.5rem; text-align: center; }
-    .footer-links { justify-content: center; }
-}
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="announcement-banner">
+        <div class="announcement-content">
+            <span class="announcement-badge">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L9 9H2L7 14L5 21L12 17L19 21L17 14L22 9H15L12 2Z"/></svg>
+                U.S. Supreme Court
+            </span>
+            <span class="announcement-text">Prof. Reichert's research cited in petition for writ of certiorari, <em>World Champ Tech v. Peloton</em>, No. 25-736 (Dec. 2025)</span>
+        </div>
+    </div>
+
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">
