@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World",
+    "date": "2026-01-30",
+    "excerpt": "Welcome to the new home of Doctrine & Data. After several years on Blogspot, I've moved the blog to reichert.law for better integration with my academic and consulting work.",
+    "tags": ["meta", "announcement"],
+    "category": "News"
+  }
+]
