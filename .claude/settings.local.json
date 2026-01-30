@@ -6,7 +6,8 @@
       "Bash(npm init:*)",
       "Bash(npm install:*)",
       "Bash(del blogindex.html bloghello-world.html blogposts.json blogfeed.xml)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "WebFetch(domain:reichert.law)"
     ]
   }
 }
