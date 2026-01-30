@@ -125,6 +125,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
 .main-nav a:hover, .main-nav a.active { color: var(--white); }
+
+/* Contact CTA button in nav */
+.main-nav a.nav-cta {
+    background: var(--gold);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.main-nav a.nav-cta::after { display: none; }
+.main-nav a.nav-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+}
+.main-nav a.nav-cta.active {
+    background: var(--gold-light);
+}
+
 .external-link-icon {
     display: inline-block;
     width: 0.7em;
@@ -1227,6 +1245,11 @@ h1, h2, h3, h4, h5, h6 {
     .main-nav li { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     .main-nav li:last-child { border-bottom: none; }
     .main-nav a { display: block; padding: 0.75rem 0; }
+    .main-nav a.nav-cta {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.5rem 1.25rem;
+    }
     .mobile-menu-toggle { display: flex; }
     .hero { padding: 3rem 1.5rem 4rem; }
     .hero-content h1 { font-size: 2rem; }
@@ -1240,4 +1263,21 @@ h1, h2, h3, h4, h5, h6 {
     .client-grid { grid-template-columns: 1fr; }
     .expertise-list { grid-template-columns: 1fr; }
     .cv-entry-header { flex-direction: column; align-items: flex-start; }
+}
+
+/* -----------------------------------------
+   Credentials Grid (Consulting Page)
+   ----------------------------------------- */
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.credential-item {
+    padding: 0.5rem 0;
+}
+
+.credential-number {
+    color: var(--gold);
 }
