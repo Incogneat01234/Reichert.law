@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic | Thomas Reichert</title>
+    <meta name="description" content="Academic research, publications, and curriculum vitae for Thomas Reichert, Assistant Professor of Law at SIU Simmons Law School.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --primary: #152538;
+    --primary-light: #1a2e4a;
+    --primary-dark: #0d1a2a;
+    --accent: #2a4a6d;
+    --gold: #b8860b;
+    --gold-light: #d4a847;
+    --gold-muted: #c9a227;
+    --text: #2c2c2c;
+    --text-light: #5a5a5a;
+    --text-muted: #888;
+    --border: #d4d4d4;
+    --border-light: #e8e8e8;
+    --bg: #ffffff;
+    --bg-subtle: #f8f7f5;
+    --bg-warm: #faf9f7;
+    --bg-cream: #fdfcfa;
+    --white: #ffffff;
+    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+    --transition-fast: 0.15s ease;
+    --transition-medium: 0.3s ease;
+    --shadow-sm: 0 1px 3px rgba(21, 37, 56, 0.08);
+    --shadow-md: 0 4px 12px rgba(21, 37, 56, 0.1);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); font-size: 16px; line-height: 1.65; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--primary); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--gold); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; color: var(--primary); line-height: 1.25; }
+
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--primary); border-bottom: 1px solid var(--primary-dark); box-shadow: var(--shadow-sm); }
+.site-header::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.header-container { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; flex-direction: column; text-decoration: none; }
+.logo-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--white); letter-spacing: 0.02em; }
+.logo-credentials { font-family: var(--font-body); font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.08em; font-weight: 500; }
+.main-nav ul { display: flex; list-style: none; gap: 2rem; }
+.main-nav a { font-size: 0.95rem; font-weight: 500; color: rgba(255, 255, 255, 0.85); padding: 0.5rem 0; position: relative; }
+.main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width var(--transition-medium); }
+.main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
+.main-nav a:hover, .main-nav a.active { color: var(--white); }
+.mobile-menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.mobile-menu-toggle span { width: 24px; height: 2px; background: var(--white); transition: var(--transition-fast); }
+
+.btn { display: inline-block; padding: 0.85rem 1.75rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; text-decoration: none; border-radius: 3px; transition: all var(--transition-fast); cursor: pointer; border: none; }
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-primary:hover { background: var(--primary-light); color: var(--white); }
+.btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--white); }
+.btn-gold:hover { background: linear-gradient(135deg, var(--gold-light), var(--gold)); }
+
+.page-header { 
+    background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-cream) 100%); 
+    padding: 4rem 2rem; 
+    text-align: center; 
+    border-bottom: 1px solid var(--border-light); 
+    position: relative;
+}
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.page-header p { font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+.content-section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+.content-section h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: 1.5rem; 
+    padding-bottom: 0.75rem; 
+    border-bottom: 2px solid var(--primary);
+    position: relative;
+}
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+}
+.content-section + .content-section { border-top: 1px solid var(--border-light); }
+
+.publication-entry { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-light); position: relative; padding-left: 1rem; }
+.publication-entry::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 3px;
+    height: calc(100% - 1.5rem);
+    background: linear-gradient(to bottom, var(--gold), transparent);
+}
+.publication-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.publication-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; }
+.publication-venue { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+.publication-note { font-size: 0.9rem; color: var(--gold); font-weight: 500; }
+.publication-links { margin-top: 0.75rem; }
+.publication-links a { font-size: 0.9rem; font-weight: 600; color: var(--gold); }
+.publication-links a:hover { color: var(--gold-light); }
+
+.cv-entry { margin-bottom: 2rem; }
+.cv-entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
+.cv-institution { font-weight: 600; font-size: 1.05rem; }
+.cv-dates { font-size: 0.9rem; color: var(--gold); font-weight: 500; }
+.cv-location { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.25rem; }
+.cv-role { font-weight: 500; color: var(--text); }
+.cv-description { margin-top: 0.75rem; font-size: 0.95rem; color: var(--text-light); }
+.cv-description ul { margin-left: 1.25rem; margin-top: 0.5rem; }
+.cv-description li { margin-bottom: 0.35rem; }
+.cv-description li::marker { color: var(--gold); }
+
+/* Research Interest Tags */
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+.research-tag {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    background: linear-gradient(135deg, var(--bg-subtle), var(--bg-cream));
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text);
+    transition: all var(--transition-fast);
+}
+.research-tag:hover {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(184, 134, 11, 0.05));
+    color: var(--primary);
+}
+.research-tag.primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-color: var(--gold);
+    color: var(--white);
+    font-weight: 500;
+}
+.research-tag.primary:hover {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+}
+
+.cv-download { 
+    text-align: center; 
+    padding: 2.5rem; 
+    background: linear-gradient(135deg, var(--bg-subtle), var(--bg-cream)); 
+    margin-top: 3rem; 
+    border-radius: 4px; 
+    border: 1px solid var(--border-light);
+    position: relative;
+}
+.cv-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.site-footer { background: var(--primary-dark); color: var(--white); padding: 3rem 2rem 2rem; position: relative; }
+.site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary-dark), var(--gold), var(--primary-dark)); }
+.footer-container { max-width: 1100px; margin: 0 auto; }
+.footer-main { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 2rem; border-bottom: 1px solid rgba(184, 134, 11, 0.2); margin-bottom: 1.5rem; }
+.footer-brand { display: flex; flex-direction: column; gap: 0.25rem; }
+.footer-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; }
+.footer-title { font-size: 0.9rem; color: var(--gold-light); }
+.footer-school { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-bottom { text-align: center; }
+.footer-bottom p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.5); }
+
+@media (max-width: 700px) {
+    .header-container { padding: 1rem; }
+    .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--primary); border-bottom: 1px solid var(--primary-dark); padding: 1rem; box-shadow: var(--shadow-md); }
+    .main-nav.active { display: block; }
+    .main-nav ul { flex-direction: column; gap: 0; }
+    .main-nav li { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .main-nav li:last-child { border-bottom: none; }
+    .main-nav a { display: block; padding: 0.75rem 0; }
+    .mobile-menu-toggle { display: flex; }
+    .cv-entry-header { flex-direction: column; align-items: flex-start; }
+    .footer-main { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-links { justify-content: center; }
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-name">Thomas Reichert</span>
+                <span class="logo-credentials">J.D., MBA, M.Eng.</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="consulting.html">Consulting</a></li>
+                    <li><a href="academic.html" class="active">Academic</a></li>
+                    <li><a href="https://doctrineanddata.blogspot.com/" target="_blank" rel="noopener">Blog ↗</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Academic Work</h1>
+            <p>Research, publications, and teaching at SIU Simmons School of Law</p>
+        </div>
+
+        <section class="content-section">
+            <h2>Research Interests</h2>
+            <div class="research-tags">
+                <span class="research-tag primary">Trademark Law</span>
+                <span class="research-tag primary">Empirical Legal Studies</span>
+                <span class="research-tag primary">Patent Law</span>
+                <span class="research-tag">Computational Legal Analysis</span>
+                <span class="research-tag">Multifactor Legal Tests</span>
+                <span class="research-tag">Law &amp; Technology</span>
+                <span class="research-tag">Intellectual Property</span>
+                <span class="research-tag">Contracts</span>
+                <span class="research-tag">Business Organizations</span>
+                <span class="research-tag">Commercial Law</span>
+                <span class="research-tag">IP Strategy</span>
+                <span class="research-tag">Law &amp; Economics</span>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Research Statement</h2>
+            <p>My research applies computational and empirical methods to longstanding doctrinal questions in intellectual property law, with a focus on generating actionable insights for practitioners, courts, and policymakers. My current project examines whether the multifactor tests that dominate trademark confusion analysis actually function as courts and practitioners assume. Using large language models to analyze thousands of decisions, I have found that the traditional thirteen-factor <em>DuPont</em> test effectively collapses to just two factors, with mark similarity and goods relatedness predicting outcomes with over 99% accuracy. This finding has immediate practical implications: it suggests that practitioners may be overinvesting in factors that rarely move outcomes, that examining attorneys could streamline their analysis, and that the doctrine itself may benefit from simplification. More broadly, I am developing a "multifactor collapse hypothesis" with implications for other areas of law that rely on similar analytical frameworks.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Publications</h2>
+            <div class="publication-entry">
+                <div class="publication-title">Doctrine, Data, and the Death of DuPont</div>
+                <div class="publication-venue">SSRN (2025)</div>
+                <div class="publication-note">SSRN Top Downloads, Intellectual Property: Empirical Studies eJournal</div>
+                <div class="publication-links">
+                    <a href="https://papers.ssrn.com/abstract=5843642" target="_blank" rel="noopener">Read on SSRN →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Works in Progress</h2>
+            <div class="publication-entry">
+                <div class="publication-title">Confirming the Collapse: An Empirical Analysis of Circuit Court Confusion Doctrine</div>
+            </div>
+            <div class="publication-entry">
+                <div class="publication-title">On Confusion</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Media Coverage</h2>
+            <div class="publication-entry">
+                <div class="publication-title">"Only 2 of 13 DuPont factors decide nearly all US TTAB cases, research suggests"</div>
+                <div class="publication-venue">Nick Robertson, MLex (Jan. 9, 2026)</div>
+                <div class="publication-links">
+                    <a href="https://www.mlex.com/mlex/articles/2428015/only-2-of-13-dupont-factors-decide-nearly-all-us-ttab-cases-research-suggests" target="_blank" rel="noopener">Read →</a>
+                </div>
+            </div>
+            <div class="publication-entry">
+                <div class="publication-title">"Reading list and comments: Doctrine, Data, and the Death of DuPont"</div>
+                <div class="publication-venue">Rebecca Tushnet, Rebecca Tushnet's 43(B)log (Dec. 15, 2025)</div>
+                <div class="publication-links">
+                    <a href="https://tushnet.blogspot.com/2025/12/reading-list-and-comments-doctrine-data.html" target="_blank" rel="noopener">Read →</a>
+                </div>
+            </div>
+            <div class="publication-entry">
+                <div class="publication-title">"Study finds DuPont test 'collapses' to two core factors, raising questions for USPTO practice"</div>
+                <div class="publication-venue">Tim Lince, World Trademark Review (Dec. 11, 2025)</div>
+                <div class="publication-links">
+                    <a href="https://www.worldtrademarkreview.com/article/new-study-finds-dupont-confusion-test-collapses-two-core-factors-raising-questions-uspto-practice" target="_blank" rel="noopener">Read →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Selected Citations</h2>
+            <div class="publication-entry">
+                <div class="publication-title">Petition for Writ of Certiorari at 11</div>
+                <div class="publication-venue"><em>World Champ Tech, LLC v. Peloton Interactive, Inc.</em>, No. 25-736 (U.S. Dec. 2025)</div>
+                <div class="publication-links">
+                    <a href="https://www.supremecourt.gov/DocketPDF/25/25-736/387764/20251217153725104_25-%20Petition%20and%20Appendix.pdf" target="_blank" rel="noopener">Read on Supreme Court Website →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Presentations</h2>
+            <div class="publication-entry">
+                <div class="publication-title">"Doctrine, Data, and the Death of DuPont"</div>
+                <div class="publication-venue">2026 Kansas City IP Symposium, Lawyers Association of Kansas City (April 23, 2026) (forthcoming)</div>
+            </div>
+            <div class="publication-entry">
+                <div class="publication-title">"Doctrine, Data, and the Death of DuPont"</div>
+                <div class="publication-venue">Chicagoland Junior Scholars Conference, Loyola University School of Law (Sept. 26-27, 2025)</div>
+            </div>
+            <div class="publication-entry">
+                <div class="publication-title">"Ethical Use of Artificial Intelligence Services as Medical Students"</div>
+                <div class="publication-venue">MEDPREP, Southern Illinois University (July 10, 2025)</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Teaching</h2>
+            <p style="margin-bottom: 1rem;"><strong>Southern Illinois University, Simmons School of Law</strong></p>
+            <p>I teach core doctrinal courses in Contracts and advanced courses in Business Organizations, covering foundational concepts in contract formation, performance, and remedies as well as agency law, partnerships, corporations, and LLCs. My teaching emphasizes practical application alongside doctrinal rigor, preparing students for both the bar exam and professional practice. I also teach courses in Intellectual Property, drawing on my extensive practice experience to connect classroom concepts to real-world IP strategy.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Education</h2>
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-institution">Southern Illinois University School of Law</span>
+                    <span class="cv-dates">May 2018</span>
+                </div>
+                <div class="cv-role">Juris Doctorate, Cum Laude, Class Rank 7th</div>
+                <div class="cv-description">Editor, Southern Illinois University Law Journal</div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-institution">Southern Illinois University College of Business</span>
+                    <span class="cv-dates">May 2018</span>
+                </div>
+                <div class="cv-role">Master of Business Administration, Cum Laude</div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-institution">Southern Illinois University College of Engineering</span>
+                    <span class="cv-dates">Dec 2013</span>
+                </div>
+                <div class="cv-role">Master of Engineering, Civil and Environmental Engineering</div>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <span class="cv-institution">Southern Illinois University College of Engineering</span>
+                    <span class="cv-dates">May 2012</span>
+                </div>
+                <div class="cv-role">Bachelor of Science, Civil and Environmental Engineering</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Selected Awards</h2>
+            <div class="cv-entry">
+                <div class="cv-role">CALI Excellence for the Future Award</div>
+                <div class="cv-description">Trademarks and Unfair Competition, Patent Law</div>
+            </div>
+            <div class="cv-entry">
+                <div class="cv-role">Top of Class (4.0)</div>
+                <div class="cv-description">Trusts and Estates, Civil Procedure I, Contracts I</div>
+            </div>
+            <div class="cv-entry">
+                <div class="cv-role">SIU Law Full Tuition Scholarship</div>
+                <div class="cv-description">Aug 2015 - May 2018</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Bar Admissions & Affiliations</h2>
+            <div class="cv-entry">
+                <div class="cv-role">United States Patent and Trademark Office</div>
+                <div class="cv-description">Patent Practitioner, Reg. No. 77,326 (2018)</div>
+            </div>
+            <div class="cv-entry">
+                <div class="cv-role">Illinois State Bar</div>
+                <div class="cv-description">Attorney, Reg. No. 6343575 (2023)</div>
+            </div>
+            <div class="cv-entry">
+                <div class="cv-role">Missouri State Bar</div>
+                <div class="cv-description">Attorney, Reg. No. 71135 (2018)</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="cv-download">
+                <p style="margin-bottom: 1rem;">Download the complete curriculum vitae</p>
+                <a href="Thomas_Reichert_CV.pdf" class="btn btn-gold" download>Download CV (PDF)</a>
+            </div>
+        </section>
+
+        <section class="content-section" style="text-align: center;">
+            <h2>Links</h2>
+            <p>
+                <a href="https://ssrn.com/author=8082404" target="_blank" rel="noopener">SSRN Author Page</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/thomas-reichert-071376173/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span class="footer-name">Thomas Reichert</span>
+                    <span class="footer-title">Assistant Professor of Law</span>
+                    <span class="footer-school">SIU Simmons School of Law</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://ssrn.com/author=8082404" target="_blank" rel="noopener">SSRN</a>
+                    <a href="https://www.linkedin.com/in/thomas-reichert-071376173/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://doctrineanddata.blogspot.com/" target="_blank" rel="noopener">Blog ↗</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thomas Reichert. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                const spans = menuToggle.querySelectorAll('span');
+                menuToggle.classList.toggle('open');
+                if (menuToggle.classList.contains('open')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>
