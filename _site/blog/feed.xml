@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doctrine &amp; Data - Thomas Reichert</title>
+    <link>https://reichert.law/blog/</link>
+    <description>Commentary on intellectual property law, empirical legal studies, and trademark doctrine.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Jan 2026 18:00:00 CST</lastBuildDate>
+    <atom:link href="https://reichert.law/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://reichert.law/blog/hello-world/</link>
+      <pubDate>Thu, 29 Jan 2026 18:00:00 CST</pubDate>
+      <description>Welcome to the new home of Doctrine &amp; Data. After several years on Blogspot, I&#39;ve moved the blog to reichert.law for better integration with my academic and consulting work.</description>
+      <guid>https://reichert.law/blog/hello-world/</guid>
+    </item>
+  </channel>
+</rss>

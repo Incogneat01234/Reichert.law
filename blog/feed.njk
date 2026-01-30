@@ -1,0 +1,27 @@
+---json
+{
+  "permalink": "/blog/feed.xml",
+  "eleventyExcludeFromCollections": true
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doctrine &amp; Data - Thomas Reichert</title>
+    <link>{{ site.url }}/blog/</link>
+    <description>Commentary on intellectual property law, empirical legal studies, and trademark doctrine.</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
+    <atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    {%- for post in collections.posts | reverse %}
+    {% set absolutePostUrl = site.url + post.url %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ absolutePostUrl }}</link>
+      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      <description>{{ post.data.excerpt }}</description>
+      <guid>{{ absolutePostUrl }}</guid>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

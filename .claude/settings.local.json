@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(copy \"C:\\\\Users\\\\Prof. Reichert\\\\Documents\\\\GitHub\\\\Reichert.law\\\\WORKING_FILES\\\\1754679756683_1742243707431_ThomasReichertHeadshot.jpg\" \"C:\\\\Users\\\\Prof. Reichert\\\\Documents\\\\GitHub\\\\Reichert.law\\\\images\\\\headshot.jpg\")",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(del blogindex.html bloghello-world.html blogposts.json blogfeed.xml)",
+      "Bash(npm run build:*)"
     ]
   }
 }

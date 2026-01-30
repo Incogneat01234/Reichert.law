@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output (uncomment if using CI/CD to build)
+# _site/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Working files
+WORKING_FILES/

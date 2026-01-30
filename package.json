@@ -1,0 +1,27 @@
+{
+  "name": "reichert.law",
+  "version": "1.0.0",
+  "description": "Professional website for Thomas Reichert - IP Attorney & Law Professor",
+  "main": "menu.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Incogneat01234/Reichert.law.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Incogneat01234/Reichert.law/issues"
+  },
+  "homepage": "https://github.com/Incogneat01234/Reichert.law#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
+  }
+}
