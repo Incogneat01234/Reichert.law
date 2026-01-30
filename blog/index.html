@@ -259,26 +259,30 @@
 
             postsContainer.innerHTML = filtered.map(post => {
                 const seriesInfo = post.series ? getSeriesInfo(post) : null;
-                return `
-                <article class="post-card">
-                    <a href="${post.slug}.html" class="post-card-link">
-                        <div class="post-card-content">
-                            <div class="post-meta-row">
-                                <time class="post-date">${formatDate(post.date)}</time>
-                                ${post.category ? `<span class="post-category">${post.category}</span>` : ''}
-                            </div>
-                            <h2 class="post-title">${post.title}</h2>
-                            ${seriesInfo ? `<div class="post-series-info">Part ${post.series.part} of <em>${post.series.name}</em></div>` : ''}
-                            <p class="post-excerpt">${post.excerpt}</p>
-                            ${post.tags && post.tags.length ? `
-                                <div class="post-tags">
-                                    ${post.tags.map(tag => `<span class="post-tag">${tag}</span>`).join('')}
-                                </div>
-                            ` : ''}
-                        </div>
-                    </a>
-                </article>
-            `}).join('');
+                let html = '<article class="post-card">';
+                html += '<a href="' + post.slug + '.html" class="post-card-link">';
+                html += '<div class="post-card-content">';
+                html += '<div class="post-meta-row">';
+                html += '<time class="post-date">' + formatDate(post.date) + '</time>';
+                if (post.category) {
+                    html += '<span class="post-category">' + post.category + '</span>';
+                }
+                html += '</div>';
+                html += '<h2 class="post-title">' + post.title + '</h2>';
+                if (seriesInfo) {
+                    html += '<div class="post-series-info">Part ' + post.series.part + ' of <em>' + post.series.name + '</em></div>';
+                }
+                html += '<p class="post-excerpt">' + post.excerpt + '</p>';
+                if (post.tags && post.tags.length) {
+                    html += '<div class="post-tags">';
+                    post.tags.forEach(tag => {
+                        html += '<span class="post-tag">' + tag + '</span>';
+                    });
+                    html += '</div>';
+                }
+                html += '</div></a></article>';
+                return html;
+            }).join('');
         }
 
         function getSeriesInfo(post) {
