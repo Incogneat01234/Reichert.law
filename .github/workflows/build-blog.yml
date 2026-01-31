@@ -1,0 +1,48 @@
+name: Build Hugo Blog
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "hugo-blog/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.155.1"
+          extended: true
+
+      - name: Build blog
+        working-directory: hugo-blog
+        run: hugo
+
+      - name: Commit and push if changed
+        run: |
+          set -e
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add blog
+            if git diff --cached --quiet; then
+              echo "No blog changes to commit."
+              exit 0
+            fi
+            git commit -m "chore: rebuild blog"
+            git push
+          else
+            echo "Working tree clean."
+          fi
