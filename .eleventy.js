@@ -4,20 +4,17 @@ module.exports = function(eleventyConfig) {
   // RSS plugin
   eleventyConfig.addPlugin(pluginRss);
 
-  // Pass through static files (not HTML - those are templates)
-  eleventyConfig.addPassthroughCopy("styles.css");
-  eleventyConfig.addPassthroughCopy("menu.js");
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("*.pdf");
-  eleventyConfig.addPassthroughCopy("*.ico");
-  eleventyConfig.addPassthroughCopy("*.png");
-  eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
-  eleventyConfig.addPassthroughCopy(".htaccess");
-
-  // Ignore README.md from being processed
-  eleventyConfig.ignores.add("README.md");
-  eleventyConfig.ignores.add("node_modules/**");
+  // Pass through static files (map src/ to root)
+  eleventyConfig.addPassthroughCopy({"src/styles.css": "styles.css"});
+  eleventyConfig.addPassthroughCopy({"src/menu.js": "menu.js"});
+  eleventyConfig.addPassthroughCopy({"src/images": "images"});
+  eleventyConfig.addPassthroughCopy({"src/*.pdf": "/"});
+  eleventyConfig.addPassthroughCopy({"src/*.ico": "/"});
+  eleventyConfig.addPassthroughCopy({"src/*.png": "/"});
+  eleventyConfig.addPassthroughCopy({"src/*.jpg": "/"});
+  eleventyConfig.addPassthroughCopy({"src/robots.txt": "robots.txt"});
+  eleventyConfig.addPassthroughCopy({"src/sitemap.xml": "sitemap.xml"});
+  eleventyConfig.addPassthroughCopy({"src/.htaccess": ".htaccess"});
 
   // Date formatting filter
   eleventyConfig.addFilter("dateDisplay", (dateObj) => {
@@ -33,8 +30,8 @@ module.exports = function(eleventyConfig) {
 
   // Create a collection for blog posts
   eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("blog/posts/*.md").sort((a, b) => {
-      return b.date - a.date; // Sort by date descending
+    return collectionApi.getFilteredByGlob("**/blog/posts/*.md").sort((a, b) => {
+      return b.date - a.date;
     });
   });
 
@@ -53,8 +50,8 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: ".",
-      output: "_site",
+      input: "src",
+      output: ".",
       includes: "_includes",
       data: "_data"
     },
