@@ -1541,12 +1541,26 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-light);
     border-radius: 10px;
     background: var(--bg-subtle);
+    justify-items: center;
+    text-align: center;
+}
+
+.sidebar-headshot-frame {
+    width: 112px;
+    height: 112px;
+    padding: 8px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(238, 238, 238, 0.9));
+    border: 1px solid var(--border-light);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+    display: grid;
+    place-items: center;
 }
 
 .sidebar-headshot {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    border-radius: 14px;
     object-fit: cover;
     border: 2px solid var(--white);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -1573,16 +1587,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-profile-links {
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
     gap: 0.5rem;
 }
 
-.sidebar-profile-links a {
+.sidebar-profile-link {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
-    padding: 0.35rem 0.7rem;
+    padding: 0.4rem 0.75rem;
     font-size: 0.85rem;
+    font-weight: 500;
     color: var(--text);
     background: var(--white);
     border: 1px solid var(--border-light);
@@ -1590,7 +1606,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all var(--transition-fast);
 }
 
-.sidebar-profile-links a:hover {
+.sidebar-profile-link:hover {
     color: var(--white);
     background: var(--gold);
     border-color: var(--gold);
@@ -1928,6 +1944,54 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     padding: 0;
     color: inherit;
+}
+
+.blog-feedback {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    background: var(--bg-subtle);
+    display: grid;
+    gap: 0.6rem;
+}
+
+.blog-feedback-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+}
+
+.blog-feedback-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.blog-feedback-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.blog-feedback-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 999px;
+    transition: all var(--transition-fast);
+}
+
+.blog-feedback-link:hover {
+    color: var(--white);
+    background: var(--gold);
 }
 
 .blog-post-footer {
