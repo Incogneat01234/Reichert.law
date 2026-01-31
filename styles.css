@@ -1533,6 +1533,69 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.05em;
 }
 
+/* Sidebar Profile */
+.sidebar-profile-card {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    background: var(--bg-subtle);
+}
+
+.sidebar-headshot {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--white);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-profile-text {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.sidebar-profile-name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+}
+
+.sidebar-profile-title {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.sidebar-profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sidebar-profile-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 999px;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-profile-links a:hover {
+    color: var(--white);
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
 /* Sidebar Search */
 .blog-search {
     position: relative;
