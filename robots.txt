@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://reichert.law/sitemap.xml
+Sitemap: https://reichert.law/blog/sitemap.xml

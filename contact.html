@@ -36,7 +36,7 @@
                 <span class="logo-name">Thomas Reichert</span>
                 <span class="logo-credentials">J.D., MBA, M.Eng.</span>
             </a>
-            <nav class="main-nav">
+            <nav class="main-nav" id="site-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="consulting.html">Consulting</a></li>
@@ -45,7 +45,7 @@
                     <li><a href="contact.html" class="nav-cta active">Contact</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -81,7 +81,7 @@
 
                     <div class="form-group">
                         <label for="inquiryType">Inquiry Type</label>
-                        <select id="inquiryType" name="Inquiry Type" required>
+                        <select id="inquiryType" name="inquiry_type" required>
                             <option value="" disabled selected>Select an option...</option>
                             <option value="Consulting">Consulting</option>
                             <option value="Scholarly">Scholarly</option>
