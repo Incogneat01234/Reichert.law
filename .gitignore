@@ -1,3 +1,6 @@
+# Dependencies (run `npm install` to regenerate)
+node_modules/
+
 # OS files
 .DS_Store
 Thumbs.db
