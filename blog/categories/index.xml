@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Doctrine &amp; Data</title>
-    <link>https://reichert.law/categories/</link>
+    <link>https://reichert.law/blog/categories/</link>
     <description>Recent content in Categories on Doctrine &amp; Data</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://reichert.law/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reichert.law/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcements</title>
-      <link>https://reichert.law/categories/announcements/</link>
+      <link>https://reichert.law/blog/categories/announcements/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://reichert.law/categories/announcements/</guid>
+      <guid>https://reichert.law/blog/categories/announcements/</guid>
       <description></description>
     </item>
   </channel>

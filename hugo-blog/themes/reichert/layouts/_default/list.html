@@ -7,13 +7,16 @@
     </div>
 </section>
 
+{{ $posts := cond .IsHome (where .Site.RegularPages "Section" "posts") .Pages }}
+{{ $posts = $posts.ByDate.Reverse }}
+
 <section class="blog-section">
     <div class="blog-layout">
         <!-- Main Content (Left) -->
         <div class="blog-main">
-            {{ if .Pages }}
+            {{ if $posts }}
             <div class="blog-posts" id="blog-posts">
-                {{ range .Pages }}
+                {{ range $posts }}
                 <article class="post-card" data-title="{{ .Title | lower }}" data-tags="{{ with .Params.tags }}{{ delimit . " " | lower }}{{ end }}" data-category="{{ with .Params.categories }}{{ index . 0 | lower }}{{ end }}">
                     <div class="post-card-content">
                         <div class="post-meta-row">
@@ -63,7 +66,7 @@
             <div class="sidebar-section">
                 <h3>Recent Posts</h3>
                 <ul class="sidebar-timeline">
-                    {{ range first 5 .Pages }}
+            {{ range first 5 $posts }}
                     <li>
                         <a href="{{ .Permalink }}">
                             <span class="timeline-date">{{ .Date.Format "Jan 2" }}</span>

@@ -1,4 +1,4 @@
-baseURL = 'https://reichert.law/'
+baseURL = 'https://reichert.law/blog/'
 languageCode = 'en-us'
 title = 'Doctrine & Data'
 theme = 'reichert'
