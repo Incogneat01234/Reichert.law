@@ -1,12 +1,12 @@
 # Project Instructions for Claude
 
 ## Overview
-This is the professional website for Thomas Reichert (reichert.law), an IP Attorney & Law Professor. It's a simple static HTML site hosted on **Porkbun static hosting** via GitHub.
+This is the professional website for Thomas Reichert (reichert.law), an IP Attorney & Law Professor. The main site is static HTML, and the blog uses **Hugo** for static generation. Hosted on **Porkbun static hosting** via GitHub.
 
 ## Project Structure
 
 ```
-/                         ← All files at root
+/                         ← Main site (static HTML)
   index.html              ← Homepage
   consulting.html         ← Consulting page
   academic.html           ← Academic page
@@ -16,28 +16,71 @@ This is the professional website for Thomas Reichert (reichert.law), an IP Attor
   menu.js                 ← Mobile menu JavaScript
   images/                 ← Images folder
   .htaccess               ← URL routing
+
+/hugo-blog/               ← Hugo source for blog
+  hugo.toml               ← Hugo config
+  content/posts/          ← Blog posts (Markdown)
+  themes/reichert/        ← Custom theme
+
+/blog/                    ← Generated blog output (don't edit directly)
 ```
 
 ## Workflow
 
-1. **Edit HTML files** directly
-2. **Commit and push** to GitHub
-3. Porkbun automatically pulls from GitHub and serves the site
+### Main Site
+1. Edit HTML files directly at root
+2. Commit and push
 
-No build step required.
+### Blog
+1. Create/edit posts in `hugo-blog/content/posts/` as Markdown
+2. Run `hugo` from the `hugo-blog/` directory
+3. Commit and push (includes generated `/blog/` folder)
 
-## Blog
+## Adding a New Blog Post
 
-The blog is hosted externally on Blogspot: https://doctrineanddata.blogspot.com/
+1. Create `hugo-blog/content/posts/your-post-slug.md`:
+   ```markdown
+   ---
+   title: "Your Post Title"
+   date: 2026-02-15
+   description: "Brief description for SEO and previews."
+   tags:
+     - trademark
+     - research
+   category: "Research"
+   ---
+
+   Your post content in Markdown...
+   ```
+
+2. Build the blog:
+   ```bash
+   cd hugo-blog
+   hugo
+   ```
+
+3. Commit and push
+
+## Key Commands
+
+```bash
+# Build blog
+cd hugo-blog && hugo
+
+# Preview blog locally
+cd hugo-blog && hugo server -D
+```
 
 ## Important Notes
 
-- **Porkbun serves from repo root** — files are served as-is
-- **Simple URLs** — files are served directly (e.g., `/consulting.html`)
-- **No build system** — pure static HTML, CSS, and JS
+- **Porkbun serves from repo root** — files served as-is
+- **Hugo outputs to /blog/** — configured in hugo.toml
+- **Blog posts are Markdown** — in hugo-blog/content/posts/
+- **RSS feed** is at /blog/index.xml
 
 ## Tech Stack
 
-- Plain HTML/CSS/JavaScript
+- Plain HTML/CSS/JavaScript (main site)
+- Hugo (blog)
 - Porkbun static hosting
 - GitHub for version control

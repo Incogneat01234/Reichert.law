@@ -1,0 +1,52 @@
+{{ define "main" }}
+<article class="blog-post">
+    <header class="blog-post-header">
+        <div class="blog-post-meta">
+            <time class="blog-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ with .Params.category }}
+            <span class="post-category">{{ . }}</span>
+            {{ end }}
+        </div>
+        <h1 class="blog-post-title">{{ .Title }}</h1>
+        {{ with .Params.tags }}
+        <div class="blog-post-tags">
+            {{ range . }}
+            <a href="/blog/tags/{{ . | urlize }}/" class="post-tag">{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    <div class="blog-post-content">
+        {{ .Content }}
+    </div>
+
+    <footer class="blog-post-footer">
+        <a href="/blog/" class="blog-back-link">← Back to Blog</a>
+    </footer>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Thomas Reichert",
+    "url": "https://reichert.law"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Thomas Reichert"
+  },
+  "description": "{{ .Description | default .Summary | truncate 160 }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}

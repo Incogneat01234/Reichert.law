@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | Thomas Reichert</title>
-    <meta name="robots" content="noindex">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>{{ if .Title }}{{ .Title }} | {{ end }}Doctrine & Data</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:title" content="{{ .Title | default .Site.Title }}">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="https://reichert.law/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ with .OutputFormats.Get "RSS" }}
+    <link rel="alternate" type="application/rss+xml" title="Doctrine & Data RSS" href="{{ .Permalink }}">
+    {{ end }}
 </head>
 <body>
     <div class="announcement-banner">
@@ -25,17 +35,17 @@
 
     <header class="site-header">
         <div class="header-container">
-            <a href="index.html" class="logo">
+            <a href="/index.html" class="logo">
                 <span class="logo-name">Thomas Reichert</span>
                 <span class="logo-credentials">J.D., MBA, M.Eng.</span>
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="consulting.html">Consulting</a></li>
-                    <li><a href="academic.html">Academic</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/consulting.html">Consulting</a></li>
+                    <li><a href="/academic.html">Academic</a></li>
+                    <li><a href="/blog/" class="active">Blog</a></li>
+                    <li><a href="/contact.html" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -47,14 +57,7 @@
     </header>
 
     <main>
-        <section class="error-section">
-            <div class="error-container">
-                <div class="error-code">404</div>
-                <h1>Page Not Found</h1>
-                <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-                <a href="index.html" class="btn btn-primary">Return Home</a>
-            </div>
-        </section>
+        {{ block "main" . }}{{ end }}
     </main>
 
     <footer class="site-footer">
@@ -72,11 +75,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Thomas Reichert. All rights reserved.</p>
+                <p>&copy; {{ now.Year }} Thomas Reichert. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="menu.js"></script>
+    <script src="/menu.js"></script>
 </body>
 </html>

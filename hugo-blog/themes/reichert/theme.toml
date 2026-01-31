@@ -1,0 +1,8 @@
+name = "Reichert"
+license = "MIT"
+licenselink = ""
+description = "Custom theme for reichert.law blog"
+
+[author]
+  name = "Thomas Reichert"
+  homepage = "https://reichert.law"

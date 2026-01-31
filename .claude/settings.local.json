@@ -9,7 +9,16 @@
       "Bash(npm run build:*)",
       "WebFetch(domain:reichert.law)",
       "Bash(git rm:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(hugo version:*)",
+      "Bash(winget install:*)",
+      "Bash(hugo new:*)",
+      "Bash(HUGO=\"/c/Users/thoma/AppData/Local/Microsoft/WinGet/Packages/Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe/hugo.exe\")",
+      "Bash(\"$HUGO\" new site hugo-blog --force)",
+      "Bash(\"$HUGO\" --verbose)",
+      "Bash(\"$HUGO\")"
     ]
   }
 }

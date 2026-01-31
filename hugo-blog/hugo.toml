@@ -1,0 +1,24 @@
+baseURL = 'https://reichert.law/'
+languageCode = 'en-us'
+title = 'Doctrine & Data'
+theme = 'reichert'
+
+# Output to parent blog/ folder
+publishDir = '../blog'
+
+[params]
+  author = "Thomas Reichert"
+  description = "Commentary on intellectual property law, empirical legal studies, and trademark doctrine."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
