@@ -3,8 +3,8 @@
     <header class="blog-post-header">
         <div class="blog-post-meta">
             <time class="blog-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ with .Params.category }}
-            <span class="post-category">{{ . }}</span>
+            {{ with .Params.categories }}
+            <span class="post-category">{{ index . 0 }}</span>
             {{ end }}
         </div>
         <h1 class="blog-post-title">{{ .Title }}</h1>

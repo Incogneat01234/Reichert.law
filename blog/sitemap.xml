@@ -5,7 +5,13 @@
     <loc>https://reichert.law/tags/about/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://reichert.law/categories/announcements/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://reichert.law/posts/</loc>
+    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://reichert.law/categories/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://reichert.law/</loc>
@@ -25,7 +31,5 @@
   </url><url>
     <loc>https://reichert.law/posts/welcome/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://reichert.law/categories/</loc>
   </url>
 </urlset>

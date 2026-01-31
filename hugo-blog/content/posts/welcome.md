@@ -7,7 +7,8 @@ tags:
   - about
   - trademark
   - empirical
-category: "Announcements"
+categories:
+  - Announcements
 ---
 
 Welcome to *Doctrine & Data*—a blog about intellectual property law through an empirical lens.

@@ -4,58 +4,140 @@
         <h1>Doctrine & Data</h1>
         <p class="blog-hero-tagline">Commentary & Analysis</p>
         <p class="blog-hero-description">Thoughts on intellectual property law, empirical legal studies, trademark doctrine, and the intersection of law and technology.</p>
-        <a href="/blog/index.xml" class="rss-link" title="Subscribe via RSS">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/></svg>
-            RSS Feed
-        </a>
     </div>
 </section>
 
 <section class="blog-section">
-    <div class="blog-container">
-        {{ if .Pages }}
+    <div class="blog-layout">
+        <!-- Main Content (Left) -->
+        <div class="blog-main">
+            {{ if .Pages }}
+            <div class="blog-posts" id="blog-posts">
+                {{ range .Pages }}
+                <article class="post-card" data-title="{{ .Title | lower }}" data-tags="{{ with .Params.tags }}{{ delimit . " " | lower }}{{ end }}" data-category="{{ with .Params.categories }}{{ index . 0 | lower }}{{ end }}">
+                    <div class="post-card-content">
+                        <div class="post-meta-row">
+                            <time class="post-date">{{ .Date.Format "January 2, 2006" }}</time>
+                            {{ with .Params.categories }}
+                            <span class="post-category">{{ index . 0 }}</span>
+                            {{ end }}
+                        </div>
+                        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                        <p class="post-excerpt">{{ .Description | default .Summary | plainify | truncate 250 }}</p>
+                        <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+            {{ else }}
+            <div class="blog-no-posts">
+                <p>New posts coming soon.</p>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Sidebar (Right) -->
+        <aside class="blog-sidebar">
+            <!-- Search -->
+            <div class="sidebar-section">
+                <h3>Search</h3>
+                <div class="blog-search">
+                    <input type="text" id="blog-search-input" placeholder="Search posts..." aria-label="Search posts">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <div class="sidebar-section">
+                <h3>Subscribe</h3>
+                <a href="/blog/index.xml" class="rss-subscribe">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/></svg>
+                    RSS Feed
+                </a>
+            </div>
+
+            <!-- Timeline / Recent Posts -->
+            <div class="sidebar-section">
+                <h3>Recent Posts</h3>
+                <ul class="sidebar-timeline">
+                    {{ range first 5 .Pages }}
+                    <li>
+                        <a href="{{ .Permalink }}">
+                            <span class="timeline-date">{{ .Date.Format "Jan 2" }}</span>
+                            <span class="timeline-title">{{ .Title | truncate 40 }}</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            {{ $categories := .Site.Taxonomies.categories }}
+            {{ if $categories }}
+            <div class="sidebar-section">
+                <h3>Categories</h3>
+                <ul class="sidebar-categories">
+                    {{ range $name, $taxonomy := $categories }}
+                    <li>
+                        <a href="/blog/categories/{{ $name | urlize }}/">
+                            {{ $name }}
+                            <span class="count">{{ len $taxonomy }}</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            <!-- Tags -->
             {{ $tags := .Site.Taxonomies.tags }}
             {{ if $tags }}
-            <div class="blog-controls">
-                <div class="blog-tags">
-                    <span class="filter-label">Tags:</span>
+            <div class="sidebar-section">
+                <h3>Tags</h3>
+                <div class="sidebar-tags">
                     {{ range $name, $taxonomy := $tags }}
-                    <a href="/blog/tags/{{ $name | urlize }}/" class="tag-filter">{{ $name }}</a>
+                    <a href="/blog/tags/{{ $name | urlize }}/" class="sidebar-tag">{{ $name }}</a>
                     {{ end }}
                 </div>
             </div>
             {{ end }}
 
-            <div class="blog-posts">
-                {{ range .Pages }}
-                <article class="post-card">
-                    <a href="{{ .Permalink }}" class="post-card-link">
-                        <div class="post-card-content">
-                            <div class="post-meta-row">
-                                <time class="post-date">{{ .Date.Format "January 2, 2006" }}</time>
-                                {{ with .Params.category }}
-                                <span class="post-category">{{ . }}</span>
-                                {{ end }}
-                            </div>
-                            <h2 class="post-title">{{ .Title }}</h2>
-                            <p class="post-excerpt">{{ .Description | default .Summary | truncate 200 }}</p>
-                            {{ with .Params.tags }}
-                            <div class="post-tags">
-                                {{ range . }}
-                                <span class="post-tag">{{ . }}</span>
-                                {{ end }}
-                            </div>
-                            {{ end }}
-                        </div>
-                    </a>
-                </article>
-                {{ end }}
+            <!-- About -->
+            <div class="sidebar-section">
+                <h3>About</h3>
+                <p class="sidebar-about">Commentary on IP law and empirical legal studies by <a href="/academic.html">Thomas Reichert</a>, Assistant Professor at SIU Law.</p>
             </div>
-        {{ else }}
-            <div class="blog-no-posts">
-                <p>New posts coming soon.</p>
-            </div>
-        {{ end }}
+        </aside>
     </div>
 </section>
+
+<script>
+// Simple client-side search
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('blog-search-input');
+    const posts = document.querySelectorAll('.post-card');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+
+            posts.forEach(function(post) {
+                const title = post.dataset.title || '';
+                const tags = post.dataset.tags || '';
+                const category = post.dataset.category || '';
+                const content = post.textContent.toLowerCase();
+
+                if (query === '' || title.includes(query) || tags.includes(query) || category.includes(query) || content.includes(query)) {
+                    post.style.display = '';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    }
+});
+</script>
 {{ end }}
