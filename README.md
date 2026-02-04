@@ -10,9 +10,9 @@ reichert-website/
 ├── consulting.html     # IP Consulting services
 ├── academic.html       # Academic work & research
 ├── contact.html        # Contact information
-├── favicon.ico         # Browser tab icon (PLACEHOLDER)
+├── favicon.png         # Browser tab icon (PLACEHOLDER)
 ├── apple-touch-icon.png # iOS home screen icon (PLACEHOLDER)
-├── og-image.jpg        # Social sharing image (PLACEHOLDER)
+├── og-image.png        # Social sharing image (PLACEHOLDER)
 ├── images/
 │   ├── headshot.jpg    # Hero section photo (PLACEHOLDER)
 │   └── README.txt      # Image specifications
@@ -24,9 +24,9 @@ reichert-website/
 1. **Upload all files** to your Porkbun hosting root directory
 2. **Replace placeholder images** with your actual images:
    - `images/headshot.jpg` - Your professional headshot (600x800px recommended)
-   - `favicon.ico` - Your favicon (32x32px)
+   - `favicon.png` - Your favicon (32x32px)
    - `apple-touch-icon.png` - iOS icon (180x180px)
-   - `og-image.jpg` - Social media preview (1200x630px)
+   - `og-image.png` - Social media preview (1200x630px)
 
 3. **Update contact email** in contact.html if the obfuscated email needs changing
 
