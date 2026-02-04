@@ -52,3 +52,11 @@ cd hugo-blog && hugo server -D
 - Hugo outputs into `/blog/` (configured in `hugo.toml`).
 - If the blog landing page should list posts, ensure the home list template pulls regular pages from the `posts` section and rebuilds the blog output.
 - RSS feed is at `/blog/index.xml`.
+
+## Analytics (Google Tag)
+
+- Always include the Google tag for `G-EF06GBPYTZ` immediately after the opening `<head>` tag on every page.
+- Ensure it exists in root HTML pages (e.g., `index.html`, `consulting.html`, `academic.html`, `contact.html`, `404.html`).
+- Ensure it exists in Hugo base template `hugo-blog/themes/reichert/layouts/_default/baseof.html`.
+- Ensure generated blog output in `/blog/` is rebuilt after template changes (run `hugo`).
+- Do not add more than one Google tag per page.
