@@ -25,7 +25,7 @@ This gets at something I keep returning to: in modern trademark disputes, the "s
 
 ## A Gentle Nudge from the Writ
 
-I will mention, gently, that the cert petition cites empirical work I have done on confusion factors. (I do not want the spotlight. Please, no.) The petition uses that work to make a narrower point: that similarity and relatedness tend to do most of the real work in confusion outcomes, and that courts sometimes "contextualize" those factors in ways that feel case-specific rather than systematic.
+I will mention, gently, that the cert petition cites empirical work I have done on confusion factors. The petition uses that work to make a narrower point: that similarity and relatedness tend to do most of the real work in confusion outcomes, and that courts sometimes "contextualize" those factors in ways that feel case-specific rather than systematic.
 
 The Ninth Circuit's move here is a good example of how that contextualization plays out in practice. The court said: similarity is measured in the environment where the marks live. In that environment, the house mark performs a source-identifying function. So the same doctrinal principle (house marks can aggravate reverse confusion) yields a different practical result.
 
