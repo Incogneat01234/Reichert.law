@@ -60,3 +60,8 @@ cd hugo-blog && hugo server -D
 - Ensure it exists in Hugo base template `hugo-blog/themes/reichert/layouts/_default/baseof.html`.
 - Ensure generated blog output in `/blog/` is rebuilt after template changes (run `hugo`).
 - Do not add more than one Google tag per page.
+
+## Blog Tone
+
+- Tone should be warm, lightly academically humorous, and curious.
+- Prefer longer posts with gently exploratory prose rather than terse or overly formal writing.
