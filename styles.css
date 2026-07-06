@@ -1078,6 +1078,63 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
 }
 
+/* Direct contact info card (students & academic) */
+.contact-info-card {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    padding: 2.5rem;
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2.5rem;
+}
+.contact-info-card h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+.contact-info-note {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+}
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+}
+.contact-info-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+}
+.contact-info-value {
+    color: var(--text);
+    line-height: 1.55;
+}
+.contact-info-value a {
+    color: var(--primary);
+    font-weight: 500;
+}
+.contact-info-value a:hover {
+    color: var(--gold);
+}
+.contact-info-item-full {
+    grid-column: 1 / -1;
+}
+.contact-form-heading {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+@media (max-width: 600px) {
+    .contact-info-grid { grid-template-columns: 1fr; }
+}
+
 /* Contact Form */
 .contact-form {
     background: var(--white);
