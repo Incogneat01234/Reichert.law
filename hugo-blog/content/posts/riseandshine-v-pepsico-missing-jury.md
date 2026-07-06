@@ -1,5 +1,5 @@
 ---
-title: "RiseandShine v. PepsiCo: The Supreme Court Takes Up Confusion, and the Jury Isn't There"
+title: "RiseandShine v. PepsiCo: The Supreme Court Takes Up Confusion"
 date: 2026-07-06
 description: "The Supreme Court granted certiorari to decide whether trademark strength is a question of fact or law. My new essay measures the assumption beneath the question: juries decide about two percent of these cases."
 tags:
