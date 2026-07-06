@@ -33,8 +33,11 @@ This is the professional website for Thomas Reichert (reichert.law), an IP Attor
 
 ### Blog
 1. Create/edit posts in `hugo-blog/content/posts/` as Markdown
-2. Run `hugo` from the `hugo-blog/` directory
-3. Commit and push (includes generated `/blog/` folder)
+2. Commit and push the Markdown only
+3. GitHub Actions (`.github/workflows/build-blog.yml`) rebuilds `/blog/` with Hugo 0.155.1 and pushes a `chore: rebuild blog` commit automatically
+4. Pull after the Action finishes to pick up the bot's rebuild commit
+
+**Do NOT run `hugo` locally and commit `/blog/` output.** Local Hugo versions differ from the Action's pinned 0.155.1 and produce conflicting generated files. For local preview use `hugo server -D` only (serves from memory, writes nothing).
 
 ## Adding a New Blog Post
 
@@ -53,21 +56,12 @@ This is the professional website for Thomas Reichert (reichert.law), an IP Attor
    Your post content in Markdown...
    ```
 
-2. Build the blog:
-   ```bash
-   cd hugo-blog
-   hugo
-   ```
-
-3. Commit and push
+2. Commit and push (Markdown only; the Action rebuilds `/blog/`)
 
 ## Key Commands
 
 ```bash
-# Build blog
-cd hugo-blog && hugo
-
-# Preview blog locally
+# Preview blog locally (never commit local build output)
 cd hugo-blog && hugo server -D
 ```
 
