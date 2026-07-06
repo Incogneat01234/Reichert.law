@@ -34,7 +34,7 @@ If the jury decides one case in fifty, then "question of fact for the jury" is, 
 
 Either way, the decision-maker being regulated is a judge. The real choice is between standards of judicial self-restraint. The merits briefs owe the Court two answers: what a reasonable-jury screen means for a factor courts grade intuitively, and what a "legal" strength grade is made of when no two records present the same mark.
 
-There is also a question hiding inside the question. "Strength" bundles two different jobs: assessing the mark on a record (how distinctive is RISE, on this evidence) and deciding what that assessment does inside the multifactor analysis (how the factors combine). Those two jobs may not deserve the same label. A Court looking for a clean line could treat the assessment as fact and the composition of the test as law, and this case gives it a vehicle to say so. Whether anyone invites that move is worth watching.
+There is also a question hiding inside the question. "Strength" bundles two different jobs: assessing the mark on a record (how distinctive is RISE, on this evidence) and deciding what that assessment does inside the multifactor analysis (how the factors combine). Those two jobs may not deserve the same label. A Court looking for a clean line could treat the assessment as fact and the composition of the test as law, and this case gives it a vehicle to say so. Whether the merits teams invite that move is worth watching. And who knows, maybe an amicus will make the argument for them.
 
 The full essay is on SSRN [here](https://ssrn.com/abstract=7045278), and it is a fast read as these things go. Merits briefs land over the summer. I will check back in when they do.
 
