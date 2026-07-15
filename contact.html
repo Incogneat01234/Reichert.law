@@ -19,16 +19,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://reichert.law/contact.html">
     <meta property="og:image" content="https://reichert.law/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Thomas Reichert">
+    <meta name="twitter:description" content="Contact Thomas Reichert for consulting, scholarly, general, or SIU student matters.">
+    <meta name="twitter:image" content="https://reichert.law/og-image.png">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260715">
     <link rel="canonical" href="https://reichert.law/contact.html">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="announcement-banner">
         <div class="announcement-content">
             <span class="announcement-badge">
@@ -62,7 +68,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="contact-section">
             <div class="contact-container">
                 <h1>Get in Touch</h1>
@@ -83,7 +89,11 @@
                             <div class="contact-info-value">1150 Douglas Drive, Mailcode 6804<br>Carbondale, IL 62901</div>
                         </div>
                         <div class="contact-info-item">
-                            <span class="contact-info-label">Email</span>
+                            <span class="contact-info-label">Consulting &amp; General</span>
+                            <div class="contact-info-value"><a href="mailto:tom@reichert.law">tom@reichert.law</a></div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Students &amp; SIU Matters</span>
                             <div class="contact-info-value"><a href="mailto:tomreich@siu.edu">tomreich@siu.edu</a></div>
                         </div>
                         <div class="contact-info-item">
@@ -104,9 +114,13 @@
                 </div>
 
                 <h2 class="contact-form-heading">Send a Message</h2>
-                <form class="contact-form" action="https://formsubmit.co/tomreich@siu.edu" method="POST">
+                <div class="contact-legal-notice" role="note">
+                    <h3>Before you send a message</h3>
+                    <p>Please provide only the names of involved parties and a general description sufficient for an initial conflicts check. Do not send confidential, privileged, substantially harmful, or time-sensitive information.</p>
+                    <p>Submitting this form does not create an attorney-client relationship. Representation begins only after conflicts review and a written engagement agreement.</p>
+                </div>
+                <form class="contact-form" action="https://formsubmit.co/tom@reichert.law" method="POST">
                     <!-- FormSubmit configuration -->
-                    <input type="hidden" name="_cc" value="tom@reichert.law">
                     <input type="hidden" name="_subject" value="New Contact Form Submission - reichert.law">
                     <input type="hidden" name="_captcha" value="true">
                     <input type="hidden" name="_next" value="https://reichert.law/contact.html?submitted=true">
@@ -153,22 +167,24 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <span class="footer-name">Thomas Reichert</span>
-                    <span class="footer-title">Assistant Professor of Law</span>
-                    <span class="footer-school">SIU Simmons School of Law</span>
+                    <span class="footer-title">IP Attorney &amp; Assistant Professor of Law</span>
+                    <a class="footer-email" href="mailto:tom@reichert.law">tom@reichert.law</a>
                 </div>
                 <div class="footer-links">
                     <a href="https://ssrn.com/author=8082404" target="_blank" rel="noopener">SSRN</a>
                     <a href="https://www.linkedin.com/in/thomas-reichert-071376173/" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="/blog/">Blog</a>
+                    <a href="privacy.html">Privacy &amp; Notice</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Thomas Reichert. All rights reserved.</p>
+                <p class="footer-legal">Attorney advertising. Responsible attorney: Thomas Reichert, 1150 Douglas Drive, Mailcode 6804, Carbondale, Illinois 62901. Licensed in Illinois and Missouri; registered to practice before the USPTO. The choice of a lawyer is an important decision and should not be based solely upon advertisements.</p>
             </div>
         </div>
     </footer>
 
-    <script src="menu.js"></script>
+    <script src="menu.js?v=20260715"></script>
     <script>
     // Show success message if redirected back after form submission
     if (window.location.search.includes('submitted=true')) {

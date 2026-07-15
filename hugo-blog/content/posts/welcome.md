@@ -2,6 +2,7 @@
 title: "Welcome to Doctrine & Data"
 date: 2026-01-30
 description: "Introducing a blog about intellectual property law through an empirical lens."
+image: "/images/social-welcome.png"
 tags:
   - welcome
   - about

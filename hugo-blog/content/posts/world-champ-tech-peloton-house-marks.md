@@ -2,6 +2,7 @@
 title: "World Champ Tech v. Peloton: House Marks, App Stores, and the Quiet Power of Context"
 date: 2026-02-04
 description: "How the Ninth Circuit's app-store context reframed a house-mark issue in a reverse-confusion case."
+image: "/images/social-peloton.png"
 tags:
   - trademark
   - confusion

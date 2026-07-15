@@ -19,16 +19,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://reichert.law/academic.html">
     <meta property="og:image" content="https://reichert.law/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Academic | Thomas Reichert">
+    <meta name="twitter:description" content="Research, publications, teaching, and presentations in trademark law, empirical legal studies, and computational legal analysis.">
+    <meta name="twitter:image" content="https://reichert.law/og-image.png">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260715">
     <link rel="canonical" href="https://reichert.law/academic.html">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="announcement-banner">
         <div class="announcement-content">
             <span class="announcement-badge">
@@ -62,7 +68,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="consulting-hero">
             <div class="consulting-hero-container">
                 <h1>Academic Work</h1>
@@ -71,7 +77,27 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <div class="academic-layout">
+            <aside class="academic-jump-nav" aria-label="Academic page sections">
+                <p class="academic-jump-title">On this page</p>
+                <nav>
+                    <ul>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#current-work">Current Work</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#presentations">Presentations</a></li>
+                        <li><a href="#teaching">Teaching</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#cv">CV &amp; Links</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="academic-sections">
+        <section class="content-section" id="research">
             <h2>Research Interests</h2>
             <div class="research-tags">
                 <span class="research-tag primary">Intellectual Property Law</span>
@@ -87,14 +113,14 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="research-statement">
             <h2>Research Statement</h2>
             <p>My research program investigates a fundamental question in legal doctrine: when courts apply complex, multi-element legal tests, do all the prescribed factors actually matter? Using large-scale empirical analysis powered by computational methods, I study what I call the "multifactor collapse hypothesis," the theory that elaborate balancing tests routinely reduce to a small number of operative factors in practice, even as courts insist on holistic consideration of all elements. If this hypothesis holds across doctrinal areas, it carries significant implications for judicial economy, practitioner strategy, legal education, and legislative design.</p>
             <p style="margin-top: 1rem;">My inaugural study tested this hypothesis in trademark law, analyzing approximately 4,000 Trademark Trial and Appeal Board decisions applying the thirteen-factor <em>DuPont</em> likelihood-of-confusion test. The results were striking: only two of thirteen factors predict outcomes with 99.55% accuracy. This finding, published in the Fordham Intellectual Property, Media &amp; Entertainment Law Journal, challenges fifty years of established doctrine and has attracted attention from practitioners, trade press, and the Supreme Court bar. I am now extending this analysis to federal circuit court confusion decisions to determine whether the same collapse pattern holds across the appellate judiciary.</p>
             <p style="margin-top: 1rem;">More broadly, my methodology, which leverages large language models to code legal decisions at a scale previously impractical for individual researchers, is designed to be portable across doctrinal areas. Multifactor tests pervade American law, from the fair use analysis in copyright to the reasonableness inquiry in Fourth Amendment search-and-seizure to the balancing frameworks in dormant Commerce Clause and due process jurisprudence. My long-term research agenda aims to map the gap between doctrine-as-written and doctrine-as-applied across these domains, contributing to a richer empirical understanding of how legal rules actually function in practice.</p>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="publications">
             <h2>Publications</h2>
             <div class="publication-entry">
                 <div class="publication-title">Doctrine, Data, and the Death of DuPont: An Empirical Analysis of Trademark Confusion at the TTAB</div>
@@ -142,7 +168,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="current-work">
             <h2>Works in Progress</h2>
             <div class="publication-entry">
                 <div class="publication-title">Multifactor Mythology: The Fiction of Holistic Adjudication</div>
@@ -162,7 +188,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="patents">
             <h2>Patents</h2>
             <div class="publication-entry">
                 <div class="publication-title">Federal Circuit Evaluation Tool</div>
@@ -170,7 +196,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="media">
             <h2>Media Coverage</h2>
             <div class="publication-entry">
                 <div class="publication-title">"Is Trademark Law Keeping Pace With Modern Brands?"</div>
@@ -216,7 +242,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="citations">
             <h2>Selected Citations</h2>
             <div class="publication-entry">
                 <div class="publication-title">Petition for Writ of Certiorari at 11</div>
@@ -227,7 +253,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="presentations">
             <h2>Presentations</h2>
             <div class="publication-entry">
                 <div class="publication-title">Panel on Multifactor Confusion Analysis</div>
@@ -275,13 +301,13 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="teaching">
             <h2>Teaching</h2>
             <p style="margin-bottom: 1rem;"><strong>Southern Illinois University, Simmons School of Law</strong></p>
             <p>I teach core doctrinal courses in Contracts and Property and advanced courses in Business Organizations and Intellectual Property, covering contract formation, performance, and remedies; estates in land and modern property doctrine; and agency law, partnerships, corporations, and LLCs. My teaching emphasizes practical application alongside doctrinal rigor, preparing students for both the bar exam and professional practice, and my Intellectual Property teaching draws on extensive practice experience to connect classroom concepts to real-world IP strategy. I also serve as faculty advisor to the Intellectual Property Law Society.</p>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="education">
             <h2>Education</h2>
             <div class="cv-entry">
                 <div class="cv-entry-header">
@@ -317,7 +343,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="awards">
             <h2>Selected Awards</h2>
             <div class="cv-entry">
                 <div class="cv-role">Summer Research Stipend</div>
@@ -337,7 +363,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="service">
             <h2>Selected Service</h2>
             <div class="cv-entry">
                 <div class="cv-role">Faculty Advisor, Intellectual Property Law Society</div>
@@ -357,7 +383,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="admissions">
             <h2>Bar Admissions & Affiliations</h2>
             <div class="cv-entry">
                 <div class="cv-role">United States Patent and Trademark Office</div>
@@ -373,14 +399,14 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="cv">
             <div class="cv-download">
                 <p style="margin-bottom: 1rem;">Download the complete curriculum vitae</p>
                 <a href="Thomas_Reichert_CV.pdf" class="btn btn-gold" target="_blank" rel="noopener">View CV (PDF)</a>
             </div>
         </section>
 
-        <section class="content-section" style="text-align: center;">
+        <section class="content-section academic-links">
             <h2>Links</h2>
             <p>
                 <a href="https://ssrn.com/author=8082404" target="_blank" rel="noopener">SSRN Author Page</a>
@@ -388,6 +414,8 @@
                 <a href="https://www.linkedin.com/in/thomas-reichert-071376173/" target="_blank" rel="noopener">LinkedIn</a>
             </p>
         </section>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -395,21 +423,23 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <span class="footer-name">Thomas Reichert</span>
-                    <span class="footer-title">Assistant Professor of Law</span>
-                    <span class="footer-school">SIU Simmons School of Law</span>
+                    <span class="footer-title">IP Attorney &amp; Assistant Professor of Law</span>
+                    <a class="footer-email" href="mailto:tom@reichert.law">tom@reichert.law</a>
                 </div>
                 <div class="footer-links">
                     <a href="https://ssrn.com/author=8082404" target="_blank" rel="noopener">SSRN</a>
                     <a href="https://www.linkedin.com/in/thomas-reichert-071376173/" target="_blank" rel="noopener">LinkedIn</a>
                     <a href="/blog/">Blog</a>
+                    <a href="privacy.html">Privacy &amp; Notice</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Thomas Reichert. All rights reserved.</p>
+                <p class="footer-legal">Attorney advertising. Responsible attorney: Thomas Reichert, 1150 Douglas Drive, Mailcode 6804, Carbondale, Illinois 62901. Licensed in Illinois and Missouri; registered to practice before the USPTO. The choice of a lawyer is an important decision and should not be based solely upon advertisements.</p>
             </div>
         </div>
     </footer>
 
-    <script src="menu.js"></script>
+    <script src="menu.js?v=20260715"></script>
 </body>
 </html>
